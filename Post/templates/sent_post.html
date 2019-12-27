@@ -1,0 +1,116 @@
+{% extends 'base.html'%}
+
+
+{%block content%}
+
+<div class="row">
+
+    <div class="col-md-6 offset-md-3 text-danger ">
+
+        <h4 class="font-weight-bold">
+            <i class="far fa-paper-plane"></i> Giden Mesajlar
+        </h4>
+        <hr>
+    </div>
+
+    <div class="col-md-6 offset-md-3 ">
+        {% for p in post %}
+        <div class="card mt-1">
+            <div class="card-header bg-danger text-white" id="headingOne">
+              
+              <h5 class="mb-0">
+                <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
+                  Başlık : {{ p.title }}
+                <!-- </button> -->
+              </h5>
+              <h5 class="mb-0">
+                  <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
+                    Konu : {{ p.get_subject_display }}
+                  <!-- </button> -->
+              </h5>
+              <h5 class="mb-0 ">
+                  <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
+                    Durumu : {{ p.get_status_display}}
+                  <!-- </button> -->
+                </h5>
+              
+                <h5 class="mb-0">
+                  <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
+                    Gönderim Tarihi : {{ p.created_on }}
+                  <!-- </button> -->
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                {{p.content}}
+              </div>
+
+              {% if p.status == "0" %}
+              <div class=" btn-group float-right dropleft ">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-cog"></i>
+                  </button>
+        
+                  <div class="dropdown-menu">    
+                   
+        
+                        <a class="dropdown-item text-danger" href="{% url 'Post:update' p.id %}">Düzenle</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="{%url 'Post:delete' p.id %}">Sil</a>
+                    
+                </div>
+              </div>
+              {%endif%}
+              
+            </div>
+          </div>   
+        {% endfor %}
+        {% if is_paginated %}
+        <ul class="pagination justify-content-center mt-1">
+          {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link " href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          {% endif %}
+          
+          {% for i in paginator.page_range %}
+            {% if page_obj.number == i %}
+            <li class="page-item active"><a class="page-link " href="?page={{ i }}"><span>{{ i }} <span class="sr-only">(current)</span></span></a></li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link " href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+          {% endif %}
+          
+        </ul>
+      
+        {% endif %}
+      
+        
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+{%endblock content%}

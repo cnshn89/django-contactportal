@@ -1,0 +1,100 @@
+<div class="container">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="{% url 'index' %}"><img class="text-left"
+        src="http://kapp.com.tr/images/kapp_logo.png" style="width: 70px; height: 100px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-tabs ml-auto">
+
+        {% if user.is_authenticated %}
+        <li class="nav-item mx-2">
+          <a class="nav-link text-danger" href="{% url 'index' %}"> <i class="fas fa-home"></i> Ana Sayfa <span
+              class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item dropdown mx-2">
+          <a class="nav-link btn-danger dropdown-toggle " href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-envelope"></i> İşlemler
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+
+            <a class="dropdown-item text-danger" href="{% url 'Post:create' %}">
+              <i class="fas fa-plus"></i>
+              Yeni Mesaj</a>
+            <div class="dropdown-divider"></div>
+
+            {% if request.user.is_admin %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:inbox' %}"><i class="fas fa-inbox"></i>
+              Gelen Mesajlar</a>
+            {% endif %}
+
+            <a class="dropdown-item text-danger" href="{% url 'Post:sent' %}"><i class="far fa-paper-plane"></i>
+              Giden Mesajlar</a>
+            <div class="dropdown-divider"></div>
+
+            {% if request.user.is_admin %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:confirmed_all' %}"><i
+                class="fas fa-check-circle"></i>
+              Onaylanan Mesajlar </a>
+            {% else %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:confirmed' %}"><i class="fas fa-check-circle"></i>
+              Onaylanan Mesajlar </a>
+            {% endif %}
+
+
+            {% if request.user.is_admin %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:pending_all' %}"><i class="fas fa-pause-circle"></i>
+              Onay Bekleyen Mesajlar
+            </a>
+            {% else %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:pending' %}"><i class="fas fa-pause-circle"></i>
+              Onay Bekleyen Mesajlar
+            </a>
+            {% endif %}
+
+            {% if request.user.is_admin %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:refused_all' %}"><i class="fas fa-window-close"></i>
+              İptal Edilen Mesajlar</a>
+            {% else %}
+            <a class="dropdown-item text-danger" href="{% url 'Post:refused' %}"><i class="fas fa-window-close"></i>
+              İptal Edilen Mesajlar</a>
+            {% endif %}
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link btn-danger dropdown-toggle " href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> {{user.first_last_name}}
+          </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+
+            {% if user.is_admin %}
+
+            <a class="dropdown-item text-danger" href="{% url 'Account:register' %}"><i class="fas fa-user-edit"></i>
+              Kullanıcı Oluştur</a>
+            <a class="dropdown-item text-danger" href="{% url 'Account:update' %}"><i class="fas fa-user-edit"></i>
+              Kullanıcı Düzenle</a>
+
+            {% endif %}
+
+            <a class="dropdown-item text-danger" href="{% url 'Account:password_change' %}"><i
+                class="fas fa-unlock-alt"></i> Şifremi Değiştir</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item text-danger" href="{% url 'Account:logout' %}"><i class="fas fa-sign-in-alt"></i>
+              Çıkış Yap</a>
+          </div>
+        </li>
+
+        {% else %}
+
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>

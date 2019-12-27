@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="row ">
+
+  <div class="col-md-6 offset-md-3 ">
+
+    <h4 class="font-weight-bold text-danger">
+      <i class="fas fa-plus"></i> Mesaj Oluştur
+    </h4>
+    <hr>
+
+    <form method="POST">
+
+      {% csrf_token %}
+
+      {{ form.media}}
+      <!--Termin tarihi için date time picker alanı kullanıldı.-->
+
+      <div class="form-group ">
+ 
+        {{form.title|as_crispy_field}}
+
+      </div>
+
+  
+    <div class="form-group">
+
+      {{form.subject|as_crispy_field}}
+      
+     </div>
+
+            
+      <div class="form-group" >
+        {{form.docnumber|as_crispy_field}}
+      </div>
+
+
+      <div class="form-group" >
+
+        {{form.duedate|as_crispy_field}}
+
+      </div>
+      
+
+      <div class="form-group ">
+
+        {{form.content|as_crispy_field}}
+
+      </div>
+
+      <div class="text-center">
+
+        <button class="btn  btn-success " type="submit">Gönder</button>
+
+      </div>
+
+    </form>
+    
+
+  </div>
+
+</div>
+
+</div>
+
+
+{% endblock content %}

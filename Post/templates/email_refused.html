@@ -1,0 +1,22 @@
+<html>
+    <head>        
+    </head>
+    <body>
+        <div><strong>Aşağıdaki mesaj yönetici tarafından reddedilmiştir.</strong></div>
+        <br>
+        <br>
+        <div><strong>KAPP İletişim Portalı Mesaj Bilgileri</strong></div>
+        <br>
+        <div> <strong>Başlık:</strong> {{title}} </div> 
+        <div> <strong>Konu:</strong> {{subject}} </div> 
+        <div> <strong>Belge No:</strong> {{docnumber|default_if_none:"-" }} </div> 
+        <div> <strong>Termin Tarihi:</strong> {{duedate|default_if_none:"-"}} </div> 
+        <div> <strong>Mesaj Durumu:</strong> {{status}} </div> 
+        <div> <strong>Gönderen:</strong> {{author}} </div> 
+        <br>
+        <div>
+                <div><strong>Mesaj İçeriği</strong></div>
+                <div><p>{{content}}</p></div>
+        </div>
+    </body>
+</html>

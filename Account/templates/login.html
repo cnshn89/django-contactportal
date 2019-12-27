@@ -1,0 +1,28 @@
+ {% extends "base.html" %} 
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="row">
+
+  <div class="col-md-6 offset-md-3 text-danger">
+    <h4 class="font-weight-bold">Kullanıcı Giriş Ekranı</h4>
+    <hr>
+
+    <form method="POST">
+
+      {% csrf_token %}
+
+      {{form|crispy}}
+
+      <div class="text-center">
+
+        <button class="btn  btn-success " type="submit">Giriş</button>
+
+      </div>
+
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

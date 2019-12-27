@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="row ">
+
+  <div class="col-md-6 offset-md-3 ">
+
+    <h4 class="font-weight-bold text-danger">
+      <i class="fas fa-plus"></i> Mesaj Güncelle
+    </h4>
+    <hr>
+
+    {% if request.user.is_admin %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+  
+        {{ adminform.media}}
+        <!--Termin tarihi için date time picker alanı kullanıldı.-->
+  
+         {{adminform|crispy}}
+        
+
+        <div class="text-center">
+          <button class="btn  btn-success " type="submit">Gönder</button>
+        </div>
+  
+      </form>
+
+    {% else %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+  
+        {{ form.media}}
+        <!--Termin tarihi için date time picker alanı kullanıldı.-->
+  
+        {{form|crispy}}
+  
+        
+        <div class="text-center">
+          <button class="btn  btn-success " type="submit">Gönder</button>
+        </div>
+  
+      </form>
+    {% endif %}
+    
+    
+
+  </div>
+
+</div>
+
+</div>
+
+
+{% endblock content %}
