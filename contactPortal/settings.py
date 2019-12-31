@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'multiselectfield',
     'crispy_forms',
     'flatpickr',
+    'ckeditor',
     'Account',
 ]
 
