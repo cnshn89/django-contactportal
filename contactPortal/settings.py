@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'Index',
     'Post',
     'multiselectfield',
-    'ckeditor',
     'crispy_forms',
     'flatpickr',
     'Account',
