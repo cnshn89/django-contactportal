@@ -30,7 +30,7 @@ def createV(request):
              'subject': post.get_subject_display(), 'docnumber': post.docnumber,
              'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content}
 
-        subject, from_email, to = 'KAPP İletişim Portalı - Yeni Mesaj !', 'planlama@kapp.com.tr', 'planlama@kapp.com.tr'
+        subject, from_email, to = 'KAPP İletişim Portalı - Yeni Mesaj !', 'planlamailetisim@gmail.com', 'planlama@kapp.com.tr'
         html_content = htmly.render(d)
         msg = EmailMultiAlternatives(subject, html_content, from_email, [to])
         msg.attach_alternative(html_content, "text/html")
@@ -66,7 +66,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'a.gurkaynak@kapp.com.tr', 'y.onkul@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -80,7 +80,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !','planlamailetisim@gmail.com', [
                         'muhasebe@kapp.com.tr', 'b.aykan@kapp.com.tr', 'personel@kapp.com.tr', 'h.erturk@kapp.com.tr', 't.aksari@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -94,7 +94,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'm.ercin@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -108,7 +108,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'export@kapp.com.tr', 'export2@kapp.com.tr', 'export3@kapp.com.tr', 'lojistik2@kapp.com.tr', 'lojistik3@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -122,7 +122,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'b.oguz@kapp.com.tr', 'malkabul@kapp.com.tr', 'a.gurkaynak@kapp.com.tr', 'y.onkul@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -136,7 +136,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         't.ozsirvan@kapp.com.tr', 't.tanagar@kapp.com.tr', 'n.yildemir@kapp.com.tr', 'lojistik@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -150,7 +150,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'planlama@kapp.com.tr', 'planlama1@kapp.com.tr', 'donusum@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -164,7 +164,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'y.aydogar@kapp.com.tr', 'a.baspinar@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -178,7 +178,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'malkabul@kapp.com.tr', 'n.yildemir@kapp.com.tr', 'lojistik3@kapp.com.tr', 'lojistik@kapp.com.tr', 't.ozsirvan@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -192,7 +192,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'bilgiislem@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -206,7 +206,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'mertcan@kapponline.com.tr', 'elif@kapponline.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -220,7 +220,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'personel@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -234,7 +234,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', ['mertcan@kapponline.com.tr', 'elif@kapponline.com.tr', 'bilgiislem@kapp.com.tr', 'malkabul@kapp.com.tr', 
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', ['mertcan@kapponline.com.tr', 'elif@kapponline.com.tr', 'bilgiislem@kapp.com.tr', 'malkabul@kapp.com.tr', 
                                                                                                                     'n.yildemir@kapp.com.tr', 'lojistik3@kapp.com.tr', 
                                                                                                                     'lojistik@kapp.com.tr', 't.ozsirvan@kapp.com.tr',
                                                                                                                     'y.aydogar@kapp.com.tr', 'a.baspinar@kapp.com.tr',
@@ -256,7 +256,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', [
                         'a.gurkaynak@kapp.com.tr', 'y.onkul@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -270,7 +270,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Onaylandı !', 'planlamailetisim@gmail.com', [
                         'muhasebe@kapp.com.tr', 'b.aykan@kapp.com.tr', 'personel@kapp.com.tr', 'h.erturk@kapp.com.tr', 't.aksari@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -284,7 +284,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', [
                         'm.ercin@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -298,7 +298,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', [
                         'export@kapp.com.tr', 'export2@kapp.com.tr', 'export3@kapp.com.tr', 'lojistik2@kapp.com.tr', 'lojistik3@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -312,7 +312,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', [
                         'b.oguz@kapp.com.tr', 'malkabul@kapp.com.tr', 'a.gurkaynak@kapp.com.tr', 'y.onkul@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -326,7 +326,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         't.ozsirvan@kapp.com.tr', 't.tanagar@kapp.com.tr', 'n.yildemir@kapp.com.tr', 'lojistik@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -340,7 +340,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         'planlama@kapp.com.tr', 'planlama1@kapp.com.tr', 'donusum@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -354,7 +354,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', [
                         'y.aydogar@kapp.com.tr', 'a.baspinar@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -368,7 +368,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         'malkabul@kapp.com.tr', 'n.yildemir@kapp.com.tr', 'lojistik3@kapp.com.tr', 'lojistik@kapp.com.tr', 't.ozsirvan@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -382,7 +382,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         'bilgiislem@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -396,7 +396,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         'mertcan@kapponline.com.tr', 'elif@kapponline.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -410,7 +410,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', [
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !','planlamailetisim@gmail.com', [
                         'personel@kapp.com.tr']
                     html_content = htmly.render(d)
                     msg = EmailMultiAlternatives(
@@ -424,7 +424,7 @@ def updateV(request, id):
                          'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                          'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                          }
-                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlama@kapp.com.tr', ['mertcan@kapponline.com.tr', 'elif@kapponline.com.tr', 
+                    subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Reddedildi !', 'planlamailetisim@gmail.com', ['mertcan@kapponline.com.tr', 'elif@kapponline.com.tr', 
                                                                                                                     'bilgiislem@kapp.com.tr', 'malkabul@kapp.com.tr', 
                                                                                                                     'n.yildemir@kapp.com.tr', 'lojistik3@kapp.com.tr', 
                                                                                                                     'lojistik@kapp.com.tr', 't.ozsirvan@kapp.com.tr',
@@ -460,7 +460,7 @@ def updateV(request, id):
                  'subject': post.get_subject_display(), 'docnumber': post.docnumber,
                  'duedate': post.duedate, 'status': post.get_status_display(), 'content': post.content
                  }
-            subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Kullanıcı Tarafından Güncellendi !', 'planlama@kapp.com.tr', 'planlama@kapp.com.tr'
+            subject, from_email, to = 'KAPP İletişim Portalı - Mesaj Kullanıcı Tarafından Güncellendi !', 'planlamailetisim@gmail.com', 'planlama@kapp.com.tr'
             html_content = htmly.render(d)
             msg = EmailMultiAlternatives(
                 subject, html_content, from_email, [to])
@@ -533,7 +533,7 @@ class adminpendingpostV(LoginRequiredMixin, ListView):
     template_name = "admin_pending_post.html"
 
     def get_queryset(self):
-        return Post.objects.filter(status=0).exclude(author=self.request.user).all()
+        return Post.objects.filter(status=0).all()
 
 
 # USER CONFIRMED POST
