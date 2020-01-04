@@ -14,10 +14,10 @@
 
     <div class="col-md-6 offset-md-3 ">
         {% for p in inbox_post %}
-        
+
         <div class="card mt-1">
           <div class="card-header bg-danger text-white" id="headingOne">
-            
+
             <h5 class="mb-0">
               <!-- <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> -->
                 Başlık : {{ p.title }}
@@ -49,15 +49,19 @@
                   aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-cog"></i>
               </button>
-    
-              <div class="dropdown-menu">    
-               
+
+              <div class="dropdown-menu">
+
                     <a class="dropdown-item text-danger" href="{% url 'Post:update' p.id %}">Düzenle</a>
             </div>
           </div>
 
           {%endif%}
-
+        </div>
+	
+		</div>
+			{% endfor %}
+		
         {% if is_paginated %}
         <ul class="pagination justify-content-center mt-1">
           {% if page_obj.has_previous %}
@@ -68,7 +72,7 @@
             </a>
           </li>
           {% endif %}
-          
+
           {% for i in paginator.page_range %}
             {% if page_obj.number == i %}
             <li class="page-item active"><a class="page-link " href="?page={{ i }}"><span>{{ i }} <span class="sr-only">(current)</span></span></a></li>
@@ -86,8 +90,8 @@
           </li>
           {% endif %}
         </ul>
-      {% endif %}
+        {% endif %}
     </div>
+	
 </div>
-
 {%endblock content%}
