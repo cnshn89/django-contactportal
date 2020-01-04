@@ -169,10 +169,8 @@ AUTH_PASSWORD_VALIDATORS = []
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.office365.com'
-EMAIL_HOST_USER = 'planlama@kapp.com.tr'
-EMAIL_HOST_PASSWORD = 'p2020.,!'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'planlama@kapp.com.tr'
-SERVER_EMAIL = 'planlama@kapp.com.tr'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'planlamailetisim@gmail.com'
+EMAIL_HOST_PASSWORD ='vjlujosmkiyhscfm'
