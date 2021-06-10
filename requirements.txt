@@ -1,4 +1,4 @@
 django-multiselectfield==0.1.8
-django==2.1.7
+django==2.2.24
 django-crispy-forms==1.8.0
 django-ckeditor==5.6.1
